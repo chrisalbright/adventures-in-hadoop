@@ -62,6 +62,33 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <version>2.9</version>
+        <configuration>
+          <downloadSources>true</downloadSources>
+          <downloadJavadocs>true</downloadJavadocs>
+          <addGroupIdToProjectName>true</addGroupIdToProjectName>
+          <classpathContainers>
+            <classpathContainer>
+    org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7
+           </classpathContainer>
+          </classpathContainers>
+
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 
   <dependencyManagement>
